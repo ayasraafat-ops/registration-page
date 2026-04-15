@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Builder Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <h1 class="text-xl font-bold text-gray-800 flex items-center">
+                <i class="fas fa-robot text-blue-500 mr-2"></i> Qwen3.6-Plus AI Assistant
+            </h1>
+        </div>
+    </header>
+
+    <!-- Chat Container -->
+    <main class="flex-1 overflow-hidden flex flex-col max-w-4xl mx-auto w-full p-4">
+        <div id="chat-box" class="flex-1 overflow-y-auto bg-white rounded-lg shadow-md p-4 flex flex-col space-y-4">
+            <!-- Initial Greeting -->
+            <div class="flex items-start">
+                <div class="bg-blue-100 rounded-full p-2 mr-3 flex-shrink-0">
+                    <i class="fas fa-robot text-blue-600"></i>
+                </div>
+                <div class="bg-gray-100 rounded-lg py-2 px-4 max-w-[80%] text-gray-800">
+                    <p>مرحباً! أنا مساعد ذكاء اصطناعي يعتمد على نموذج Qwen3.6-plus. كيف يمكنني مساعدتك في بناء موقعك اليوم؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="mt-4 bg-white rounded-lg shadow-md p-3">
+            <form id="chat-form" class="flex gap-2 relative">
+                <textarea
+                    id="user-input"
+                    class="flex-1 resize-none border rounded-lg p-3 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    rows="2"
+                    placeholder="اكتب رسالتك هنا..."
+                    dir="auto"></textarea>
+                <button type="submit" id="send-btn" class="absolute bottom-3 right-3 text-white bg-blue-500 hover:bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
