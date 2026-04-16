@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Powered by Qwen 3.6 Plus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .chat-container {
+            height: calc(100vh - 12rem);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen">
+
+    <header class="w-full bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">AI Chatbot Assistant</h1>
+        <p class="text-sm">Powered by Qwen 3.6 Plus via OpenRouter</p>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl p-4 flex flex-col">
+        <div class="bg-white shadow-lg rounded-lg flex-grow flex flex-col overflow-hidden">
+            <!-- Chat Box -->
+            <div id="chat-box" class="flex-grow p-4 overflow-y-auto bg-gray-50 flex flex-col gap-4 chat-container">
+                <!-- Welcome Message -->
+                <div class="flex justify-start">
+                    <div class="bg-blue-100 text-blue-900 p-3 rounded-lg max-w-[80%] shadow-sm">
+                        Hello! I am your AI assistant powered by Qwen 3.6 Plus. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-4 bg-white border-t border-gray-200 flex gap-2">
+                <input type="text" id="user-input" class="flex-grow border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..." />
+                <button id="send-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200 disabled:opacity-50 flex items-center justify-center min-w-[80px]">
+                    <span id="btn-text">Send</span>
+                    <div id="btn-spinner" class="hidden animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full text-center p-4 text-gray-500 text-sm">
+        &copy; 2024 AI Chatbot Inc.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
