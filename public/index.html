@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen AI Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+
+    <div class="w-full max-w-2xl bg-white shadow-lg rounded-lg flex flex-col h-[80vh]">
+        <!-- Header -->
+        <div class="bg-blue-600 text-white py-4 px-6 rounded-t-lg">
+            <h1 class="text-2xl font-bold">Qwen AI Chat</h1>
+            <p class="text-sm opacity-80">Powered by Qwen 3.6 Plus & OpenRouter</p>
+        </div>
+
+        <!-- Chat Container -->
+        <div id="chat-container" class="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50">
+            <!-- Messages will be appended here -->
+            <div class="flex flex-col space-y-2">
+                <div class="self-start bg-gray-200 text-gray-800 rounded-lg py-2 px-4 max-w-[80%] shadow-sm">
+                    Hello! I am Qwen AI. How can I help you today?
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="bg-white border-t p-4 rounded-b-lg flex gap-2">
+            <input type="text" id="message-input" class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..." />
+            <button id="send-button" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50">
+                Send
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
