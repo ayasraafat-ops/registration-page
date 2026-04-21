@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد الذكاء الاصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .whitespace-pre-wrap {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+    <div class="container mx-auto px-4 py-8 flex-grow flex flex-col max-w-4xl h-full">
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-blue-600">مساعد الذكاء الاصطناعي (Qwen 3.6 Plus)</h1>
+            <p class="text-gray-500 mt-2">اطرح أي سؤال، وسأقوم بمساعدتك!</p>
+        </header>
+
+        <div class="bg-white rounded-xl shadow-lg flex-grow flex flex-col overflow-hidden">
+            <!-- Chat Box -->
+            <div id="chat-box" class="flex-grow p-6 overflow-y-auto flex flex-col space-y-4">
+                <!-- Welcome Message -->
+                <div class="flex justify-start">
+                    <div class="bg-blue-100 text-blue-900 rounded-2xl rounded-tr-none px-4 py-3 max-w-[80%] whitespace-pre-wrap">مرحباً بك! أنا مساعدك الذكي المعتمد على نموذج Qwen 3.6 Plus. كيف يمكنني مساعدتك اليوم؟</div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="border-t border-gray-200 p-4 bg-gray-50">
+                <form id="chat-form" class="flex gap-2 relative">
+                    <textarea
+                        id="user-input"
+                        class="flex-grow rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-14"
+                        placeholder="اكتب رسالتك هنا..."
+                        rows="1"
+                        required
+                    ></textarea>
+                    <button
+                        type="submit"
+                        id="send-btn"
+                        class="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-6 py-2 font-medium transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                        <span>إرسال</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
