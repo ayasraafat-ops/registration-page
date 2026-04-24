@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي - Qwen 3.6 Plus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .whitespace-pre-wrap { white-space: pre-wrap; }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col h-screen text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold text-center">مساعد الذكاء الاصطناعي</h1>
+    </header>
+
+    <main class="flex-grow p-4 overflow-y-auto flex flex-col items-center">
+        <div id="chat-container" class="w-full max-w-3xl flex flex-col gap-4">
+            <!-- Messages will be appended here -->
+        </div>
+    </main>
+
+    <footer class="bg-white p-4 border-t border-gray-200">
+        <div class="max-w-3xl mx-auto flex gap-2">
+            <input type="text" id="user-input" class="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا..." onkeypress="handleKeyPress(event)">
+            <button id="send-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-200" onclick="sendMessage()">إرسال</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
