@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مساعد الذكاء الاصطناعي</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for better appearance */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+
+  <header class="bg-indigo-600 text-white p-4 shadow-md text-center">
+    <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي (Qwen 3.6 Plus)</h1>
+  </header>
+
+  <main class="flex-grow flex justify-center p-4 overflow-hidden">
+    <div class="w-full max-w-3xl bg-white rounded-lg shadow-lg flex flex-col overflow-hidden">
+
+      <!-- Chat Messages Container -->
+      <div id="chat-container" class="flex-grow p-4 overflow-y-auto flex flex-col space-y-4">
+        <!-- Initial Message -->
+        <div class="flex justify-start">
+          <div class="bg-gray-200 text-gray-800 p-3 rounded-lg max-w-[80%] rounded-tr-none shadow-sm">
+            <p>مرحباً! أنا مساعد الذكاء الاصطناعي الخاص بك. كيف يمكنني مساعدتك اليوم؟</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="border-t p-4 bg-gray-50 flex items-center">
+        <form id="chat-form" class="w-full flex space-x-2 space-x-reverse">
+          <input
+            type="text"
+            id="user-input"
+            class="flex-grow border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="اكتب رسالتك هنا..."
+            autocomplete="off"
+            required
+          >
+          <button
+            type="submit"
+            id="send-button"
+            class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            إرسال
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
