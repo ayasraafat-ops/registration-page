@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي - Qwen 3.6 Plus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for better look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي</h1>
+        <p class="text-sm opacity-80">مدعوم بنموذج Qwen 3.6 Plus</p>
+    </header>
+
+    <!-- Chat Container -->
+    <main class="flex-1 overflow-y-auto p-4 flex flex-col gap-4" id="chat-container">
+        <!-- Initial Welcome Message -->
+        <div class="flex justify-start">
+            <div class="bg-white rounded-lg p-3 max-w-[80%] shadow shadow-sm border border-gray-200">
+                <p class="text-gray-800 whitespace-pre-wrap">مرحباً! أنا مساعد ذكاء اصطناعي مدعوم بنموذج Qwen. كيف يمكنني مساعدتك اليوم؟</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Input Area -->
+    <footer class="bg-white p-4 shadow-md border-t border-gray-200">
+        <form id="chat-form" class="flex gap-2 max-w-4xl mx-auto">
+            <input
+                type="text"
+                id="user-input"
+                class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="اكتب رسالتك هنا..."
+                required
+            >
+            <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-200 disabled:opacity-50 flex items-center justify-center min-w-[80px]"
+                id="submit-button"
+            >
+                إرسال
+            </button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
