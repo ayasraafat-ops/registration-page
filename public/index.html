@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد الذكاء الاصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for better appearance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md z-10">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي (Qwen)</h1>
+        </div>
+    </header>
+
+    <!-- Main Chat Area -->
+    <main class="flex-1 overflow-hidden container mx-auto max-w-4xl p-4 flex flex-col">
+        <!-- Chat Messages Container -->
+        <div id="chat-container" class="flex-1 overflow-y-auto bg-white rounded-lg shadow-md p-4 mb-4 flex flex-col gap-4">
+            <!-- Messages will be appended here dynamically -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 text-gray-800 rounded-lg p-3 max-w-[80%] shadow-sm">
+                    <p class="whitespace-pre-wrap">مرحباً! أنا مساعدك الذكي المعتمد على نموذج Qwen. كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="bg-white rounded-lg shadow-md p-3 flex items-end gap-2">
+            <textarea
+                id="user-input"
+                class="flex-1 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                rows="1"
+                placeholder="اكتب رسالتك هنا..."
+            ></textarea>
+            <button
+                id="send-button"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-200 font-bold flex items-center justify-center min-w-[100px]"
+            >
+                <span>إرسال</span>
+                <svg id="loading-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="error-message" class="text-red-500 text-sm mt-2 hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
