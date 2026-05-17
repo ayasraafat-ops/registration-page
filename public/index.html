@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد الذكاء الاصطناعي (Qwen 3.6 Plus)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles if needed, Tailwind mostly covers it */
+        .message-content {
+            white-space: pre-wrap; /* For proper text rendering including newlines */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 flex flex-col h-screen">
+
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold text-center">مساعد الذكاء الاصطناعي</h1>
+    </header>
+
+    <main class="flex-grow p-4 overflow-y-auto w-full max-w-4xl mx-auto flex flex-col space-y-4" id="chat-container">
+        <!-- Messages will be injected here by script.js -->
+        <div class="flex justify-start w-full">
+            <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 max-w-[80%]">
+                <p class="text-gray-700 message-content">مرحباً! أنا مساعد ذكاء اصطناعي يعتمد على نموذج Qwen 3.6 Plus. كيف يمكنني مساعدتك اليوم؟</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white p-4 shadow-inner">
+        <div class="w-full max-w-4xl mx-auto flex gap-2">
+            <input type="text" id="user-input" class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="اكتب رسالتك هنا..." />
+            <button id="send-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                إرسال
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
