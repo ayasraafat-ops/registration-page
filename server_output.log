@@ -1,0 +1,10 @@
+
+> app@1.0.0 start
+> node server.js
+
+◇ injected env (1) from .env // tip: ⌘ override existing { override: true }
+(node:27079) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server listening on port 3000
+OpenRouter API Error: User not found.
+OpenRouter API Error: User not found.
