@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for better appearance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold text-center">مساعد الذكاء الاصطناعي</h1>
+    </header>
+
+    <main class="flex-grow p-4 flex justify-center overflow-hidden">
+        <div class="bg-white w-full max-w-3xl rounded-lg shadow-lg flex flex-col overflow-hidden">
+            <div id="chat-window" class="flex-grow p-4 overflow-y-auto flex flex-col space-y-4">
+                <!-- Chat messages will be appended here -->
+                <div class="flex justify-start">
+                    <div class="bg-gray-200 text-gray-800 p-3 rounded-lg max-w-[80%] whitespace-pre-wrap">مرحباً! كيف يمكنني مساعدتك اليوم؟</div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-gray-50 border-t border-gray-200 flex space-x-2 space-x-reverse">
+                <input type="text" id="message-input" class="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا..." onkeypress="handleKeyPress(event)">
+                <button id="send-button" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-200" onclick="sendMessage()">إرسال</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
