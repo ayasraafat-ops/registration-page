@@ -1,0 +1,6 @@
+◇ injected env (2) from .env // tip: ⌘ enable debugging { debug: true }
+(node:24737) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server is running on http://localhost:3000
+OpenRouter API Error: User not found.
+OpenRouter API Error: User not found.
