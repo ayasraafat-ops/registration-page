@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد الذكاء الاصطناعي - Qwen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .chat-container {
+            height: calc(100vh - 180px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-blue-600 text-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي (Qwen)</h1>
+        <div class="text-sm bg-blue-700 px-3 py-1 rounded-full">مدعوم بواسطة OpenRouter</div>
+    </header>
+
+    <main class="flex-grow container mx-auto max-w-4xl p-4 flex flex-col">
+        <div id="chat-box" class="chat-container bg-white rounded-lg shadow-lg p-4 overflow-y-auto flex flex-col space-y-4 mb-4">
+            <!-- Messages will be injected here -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 text-gray-800 rounded-lg p-3 max-w-3xl shadow-sm">
+                    مرحباً! أنا مساعد الذكاء الاصطناعي الخاص بك. كيف يمكنني مساعدتك اليوم؟
+                </div>
+            </div>
+        </div>
+
+        <form id="chat-form" class="bg-white p-3 rounded-lg shadow-lg flex items-center space-x-2 space-x-reverse">
+            <textarea id="message-input" rows="1" class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="اكتب رسالتك هنا..." required></textarea>
+            <button type="submit" id="send-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center min-w-[100px]">
+                <span id="btn-text">إرسال</span>
+                <div id="btn-spinner" class="hidden animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+            </button>
+        </form>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
