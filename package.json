@@ -1,0 +1,15 @@
+{
+  "name": "ai-chat-website",
+  "version": "1.0.0",
+  "description": "AI Chat Website using Qwen 3.6 Plus via OpenRouter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.11"
+  }
+}
