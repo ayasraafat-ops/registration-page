@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي - Qwen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">محادثة مع الذكاء الاصطناعي (Qwen)</h1>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 flex flex-col items-center">
+        <div id="chat-container" class="w-full max-w-3xl flex flex-col space-y-4">
+            <!-- Messages will be injected here -->
+        </div>
+    </main>
+
+    <footer class="p-4 bg-white shadow-inner flex justify-center">
+        <div class="w-full max-w-3xl flex space-x-2 space-x-reverse">
+            <input type="text" id="user-input" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا..." onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-bold" id="send-button">
+                إرسال
+            </button>
+        </div>
+    </footer>
+
+    <!-- Error Toast -->
+    <div id="error-toast" class="hidden fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-6 py-3 rounded shadow-lg transition-opacity duration-300">
+        <span id="error-message"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
