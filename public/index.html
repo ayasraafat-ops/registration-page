@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي - Qwen</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        /* Hide scrollbar for clean look in chat box */
+        #chat-box::-webkit-scrollbar {
+            width: 8px;
+        }
+        #chat-box::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        #chat-box::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        #chat-box::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col h-screen">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center flex-shrink-0">
+        <h1 class="text-2xl font-bold">محادثة مع الذكاء الاصطناعي (Qwen)</h1>
+    </header>
+
+    <!-- Main Chat Area -->
+    <main class="flex-grow overflow-hidden flex flex-col max-w-4xl w-full mx-auto p-4">
+        <!-- Chat History -->
+        <div id="chat-box" class="flex-grow overflow-y-auto bg-white rounded-lg shadow p-4 mb-4 flex flex-col space-y-4">
+            <!-- Messages will be injected here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="flex-shrink-0">
+            <form id="chat-form" class="flex gap-2">
+                <input
+                    type="text"
+                    id="user-input"
+                    class="flex-grow border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="اكتب رسالتك هنا..."
+                    autocomplete="off"
+                    required
+                >
+                <button
+                    type="submit"
+                    id="send-button"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 disabled:opacity-50"
+                >
+                    إرسال
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
