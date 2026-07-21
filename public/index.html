@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col h-screen">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي (Qwen)</h1>
+    </header>
+
+    <!-- Chat Container -->
+    <main class="flex-1 overflow-y-auto p-4" id="chat-container">
+        <!-- Messages will be injected here -->
+        <div class="flex justify-center my-4 hidden" id="loading-indicator">
+            <span class="text-gray-500">جاري التفكير...</span>
+        </div>
+    </main>
+
+    <!-- Input Area -->
+    <footer class="bg-white p-4 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] border-t border-gray-200">
+        <form id="chat-form" class="flex gap-2 max-w-4xl mx-auto">
+            <input type="text" id="message-input" placeholder="اكتب رسالتك هنا..." class="flex-1 border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-200" id="send-button">
+                إرسال
+            </button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
