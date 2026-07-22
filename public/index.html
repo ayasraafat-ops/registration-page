@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">محادثة مع الذكاء الاصطناعي (Qwen Plus)</h1>
+    </header>
+
+    <main class="flex-grow flex flex-col p-4 sm:p-8 max-w-4xl mx-auto w-full">
+        <div id="chat-container" class="flex-grow bg-white rounded-lg shadow-lg p-4 overflow-y-auto mb-4 flex flex-col space-y-4">
+            <!-- Messages will be appended here -->
+        </div>
+
+        <form id="chat-form" class="flex space-x-2 space-x-reverse">
+            <input
+                type="text"
+                id="message-input"
+                class="flex-grow border border-gray-300 rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="اكتب رسالتك هنا..."
+                required
+            >
+            <button
+                type="submit"
+                id="send-button"
+                class="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition duration-300"
+            >
+                إرسال
+            </button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
