@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي (Qwen)</h1>
+    </header>
+
+    <!-- Chat Container -->
+    <main class="flex-grow p-4 overflow-y-auto" id="chat-container">
+        <!-- Messages will be appended here -->
+        <div class="flex justify-center my-4 hidden" id="loading-indicator">
+            <span class="text-gray-500 font-medium">جاري التفكير...</span>
+        </div>
+    </main>
+
+    <!-- Input Area -->
+    <footer class="bg-white p-4 shadow-inner border-t">
+        <div class="max-w-4xl mx-auto flex gap-2">
+            <input type="text" id="user-input" class="flex-grow border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا..." />
+            <button id="send-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">إرسال</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
