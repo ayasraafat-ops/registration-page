@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">محادثة مع الذكاء الاصطناعي (Qwen)</h1>
+    </header>
+
+    <main class="flex-grow p-4 overflow-hidden flex flex-col justify-center items-center">
+        <div class="w-full max-w-2xl h-full flex flex-col bg-white rounded-lg shadow-lg">
+            <div id="chat-container" class="flex-grow p-4 overflow-y-auto flex flex-col space-y-4">
+                <!-- Messages will be appended here -->
+                <div class="flex justify-start">
+                    <div class="bg-blue-100 text-blue-900 rounded-lg p-3 max-w-[80%] whitespace-pre-wrap">
+                        مرحباً! كيف يمكنني مساعدتك اليوم؟
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-gray-200">
+                <form id="chat-form" class="flex space-x-2 space-x-reverse">
+                    <input type="text" id="message-input" class="flex-grow p-2 border border-gray-300 rounded-l-none rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا..." required>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-l-lg hover:bg-blue-700 transition duration-200" id="send-button">إرسال</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
