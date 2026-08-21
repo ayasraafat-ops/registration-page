@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6; /* bg-gray-100 */
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">موقع ذكاء اصطناعي</h1>
+    </header>
+
+    <main class="flex-grow p-4 md:p-8 overflow-hidden flex justify-center">
+        <div class="w-full max-w-3xl flex flex-col bg-white rounded-lg shadow-lg h-full border border-gray-200">
+
+            <div id="chat-container" class="flex-grow p-4 overflow-y-auto space-y-4 flex flex-col">
+                <!-- Messages will be appended here -->
+                <div class="flex justify-end w-full">
+                    <div class="bg-blue-100 text-blue-900 px-4 py-3 rounded-2xl rounded-tr-none shadow-sm max-w-[80%] whitespace-pre-wrap">مرحباً! كيف يمكنني مساعدتك اليوم؟</div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-gray-50 border-t border-gray-200 rounded-b-lg">
+                <form id="chat-form" class="flex gap-2 relative">
+                    <input type="text" id="user-input" class="flex-grow p-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-4 shadow-sm" placeholder="اكتب رسالتك هنا..." required autocomplete="off">
+                    <button type="submit" id="submit-btn" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md flex items-center justify-center w-12 h-12 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        <svg xmlns="http://www.3000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 transform rotate-180">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
