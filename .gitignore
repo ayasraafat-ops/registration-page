@@ -1,0 +1,6 @@
+.env
+node_modules/
+verification/
+.pytest_cache/
+__pycache__/
+*.log
