@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6;
+        }
+        #chat-container {
+            height: calc(100vh - 160px);
+        }
+        .message-content {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">محادثة ذكاء اصطناعي</h1>
+    </header>
+
+    <main class="flex-1 max-w-4xl w-full mx-auto p-4 flex flex-col">
+        <div id="chat-container" class="bg-white rounded-lg shadow-md p-4 overflow-y-auto mb-4 flex-1 flex flex-col gap-4">
+            <!-- Messages will appear here -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tr-none max-w-[80%]">
+                    <p class="message-content">مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-2 rounded-lg shadow-md flex gap-2">
+            <input type="text" id="message-input" placeholder="اكتب رسالتك هنا..."
+                   class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+            <button id="send-button" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                إرسال
+            </button>
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
