@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center justify-center">
+
+    <div class="w-full max-w-3xl bg-white rounded-lg shadow-md h-[80vh] flex flex-col">
+        <!-- Header -->
+        <div class="bg-blue-600 text-white p-4 rounded-t-lg text-center font-bold text-xl">
+            مساعد الذكاء الاصطناعي (Qwen Plus)
+        </div>
+
+        <!-- Chat Container -->
+        <div id="chat-container" class="flex-1 p-4 overflow-y-auto flex flex-col space-y-4">
+            <!-- Welcome message -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tr-none max-w-xs whitespace-pre-wrap">مرحباً! كيف يمكنني مساعدتك اليوم؟</div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-4 border-t border-gray-200 bg-gray-50 rounded-b-lg">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <input type="text" id="user-input" class="flex-1 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا...">
+                <button id="send-button" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition duration-150">إرسال</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
