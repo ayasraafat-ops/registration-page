@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع ذكاء اصطناعي - Qwen 3.6 Plus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f3f4f6;
+        }
+        #chat-container {
+            height: calc(100vh - 160px);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col h-screen">
+
+    <header class="bg-blue-600 text-white p-4 shadow-md text-center">
+        <h1 class="text-2xl font-bold">مساعد الذكاء الاصطناعي (Qwen 3.6 Plus)</h1>
+    </header>
+
+    <main class="flex-grow container mx-auto max-w-4xl p-4 flex flex-col">
+        <div id="chat-container" class="bg-white rounded-lg shadow p-4 flex flex-col space-y-4 mb-4 flex-grow">
+            <!-- Messages will be appended here -->
+            <div class="flex justify-start">
+                <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tr-none max-w-3xl whitespace-pre-wrap">مرحباً! أنا مساعدك الذكي. كيف يمكنني مساعدتك اليوم؟</div>
+            </div>
+        </div>
+
+        <form id="chat-form" class="flex gap-2">
+            <input type="text" id="user-input" class="flex-grow p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="اكتب رسالتك هنا..." required autocomplete="off">
+            <button type="submit" id="send-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">إرسال</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
